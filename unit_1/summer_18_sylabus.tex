@@ -1,0 +1,324 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SET UP %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt, a4paper]{article}
+%\usepackage{geometry}
+\usepackage[inner=1.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\pagestyle{empty}
+\usepackage{graphicx}
+\usepackage{fancyhdr, lastpage, bbding, pmboxdraw}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[colorinlistoftodos]{todonotes}
+%\usepackage{draftwatermark}
+
+%\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\definecolor{red}{rgb}{.98,0,0}
+\usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{Statistics for Data Science} }
+%\chead{ \fancyplain{}{} }
+\rhead{ \fancyplain{}{\today} }
+%\rfoot{\fancyplain{}{page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RO, LE] {page \thepage\ of \pageref{LastPage} }
+\thispagestyle{plain}
+
+%%%%%%%%%%%% LISTING %%%
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\usepackage{verbatim} % used to display code
+\usepackage{fancyvrb}
+\usepackage{acronym}
+\usepackage{amsthm}
+\VerbatimFootnotes % Required, otherwise verbatim does not work in footnotes!
+
+
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\definecolor{lightlightgray}{gray}{0.93}
+
+
+\lstset{
+%language=bash,                         % Code langugage
+basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
+keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
+commentstyle=\color{gray},              % Comments font
+numbers=left,                           % Line nums position
+numberstyle=\tiny,                      % Line-numbers fonts
+stepnumber=1,                           % Step between two line-numbers
+numbersep=5pt,                          % How far are line-numbers from code
+backgroundcolor=\color{lightlightgray}, % Choose background color
+frame=none,                             % A frame around the code
+tabsize=2,                              % Default tab size
+captionpos=t,                           % Caption-position = bottom
+breaklines=true,                        % Automatic line breaking?
+breakatwhitespace=false,                % Automatic breaks only at whitespace?
+showspaces=false,                       % Dont make spaces visible
+showtabs=false,                         % Dont make tabls visible
+columns=flexible,                       % Column format
+morekeywords={__global__, __device__},  % CUDA specific keywords
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{Statistics for Data Science \\ Syllabus \\ Updated Dec 22, 2016}
+\begin{document}
+\begin{center}
+{\Large \textsc{Statistics for Data Science\\ Syllabus}}
+\end{center}
+\begin{center}
+2018 Summer
+\end{center}
+
+
+%\begin{center}
+\rule{6.5in}{0.4pt}
+%\begin{minipage}[t]{.75\textwidth}
+
+\begin{tabular}{llcccll}
+
+  \textbf{Course Leads:} & Coye Cheshire & & &  &  Paul Laskowski & \\
+
+                              &  \href{mailto:coye@ischool.berkeley.edu}{coye@ischool.berkeley.edu} & & & & \href{mailto:paul@ischool.berkeley.edu}{paul@ischool.berkeley.edu} &     \\
+         
+\end{tabular}              \\
+
+\begin{tabular}{lll}
+
+  \textbf{Instructional Team:}     &  Ryan Kappedal   \\
+ &  \href{mailto:rkappedal@gmail.com}{rkappedal@gmail.com}   \\
+ &  Micah Gell-Redman  & Eric Penner \\
+& \href{mailto:micah.gr@gmail.com}{micah.gr@gmail.com} &  \href{mailto:eric.penner@ischool.berkeley.edu}{eric.penner@ischool.berkeley.edu}   \\
+ 
+
+
+\end{tabular}
+
+                           
+
+%\end{minipage}
+\rule{6.5in}{0.4pt}
+%\end{center}
+
+\vskip.15in
+\noindent\textbf{Office Hours:} To be posted by the instructors on ISVC
+
+\vspace{.5cm}
+%\setlength{\unitlength}{1in}
+%\renewcommand{\arraystretch}{2}
+
+%\noindent\textbf{Course Page:} 
+%\url{https://TBDWebPage.edu/DataSci_W2XX}
+
+\vskip.15in
+\noindent \textbf{Course Description:\\}  
+
+\noindent The goal of this course is to provide students with a foundational understanding of classical statistics and how it fits within the broader context of data science.  Students will learn to apply the most common statistical procedures correctly, checking assumptions and responding appropriately when they appear violated.  They will also learn to evaluate the design of a study and how the variables being measured relate to research questions.  
+
+The course begins with a focus on exploratory analysis and descriptive statistics.  From there, we learn how statistical models are built using the structure of probability theory.  Next, we use the simple example of the mean to demonstrate the use of estimators and hypothesis tests.  We then turn to classical linear regression, taking several weeks to build a strong understanding of this central topic.  Our treatment stresses causal inference and includes a discussion of omitted variables.  At the end, we describe some of the concerns that arise in the process of specifying linear models.  Throughout the course, students will practice analyzing real-world data using the open-source language, R.   (3 units)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vskip.15in
+\noindent\textbf{Prerequisites:}
+\begin{enumerate}  
+  \item Working knowledge of calculus. A good understanding of linear algebra is strongly recommended, as the course will make occasional use of matrix notation.
+  \item At least one prior college-level statistics course is recommended.
+\end{enumerate}
+
+\vskip.15in
+\noindent\textbf{Weekly Workflow:} \\
+\noindent A typical week of the course proceeds as follows:
+\begin{itemize}  
+  \item \textbf{Before live session:} Students watch the asynchronous videos and study the assigned readings for a given unit.  Note that the readings are mandatory and often include more examples than provided in the videos.  Students should also complete any assigned pre-class exercises.
+  \item \textbf{During live session:} Students engage in activities to reinforce and extend the materials they studied. 
+  \item \textbf{After live session:} Students complete the homework, lab, or other assignments corresponding to the given unit.  Homeworks will be due 24 hours before the following live session.  See individual labs for their due dates.
+\end{itemize}
+
+
+
+
+\vskip.15in
+\noindent\textbf{Communication:} \\
+Instructors will use a Slack channel for general course communication.  Please post any questions regarding course content and logistics to the Slack channel so that other students can see them.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Required Textbooks and Other References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vskip.15in
+\noindent\textbf{Required Textbooks:}
+
+\begin{enumerate}
+
+ \item Devore, J. L. (2015). \textit{Probability and statistics for engineering and the sciences}.</em> Boston, MA: Cengage Learning.
+
+  This will be our primary textbook for the first part of the course, including probability theory, estimation, and hypothesis testing.  Devore includes enough mathematical detail to support our curriculum, but explains the intuition behind it slowly with a large number of examples.
+
+
+  \item Wooldridge, J. (2015). \textit{Introductory econometrics: A modern approach} 6th ed. Boston, MA: Cengage Learning.
+  
+  For our study of classical linear regression, we will switch to this classic econometrics textbook.  Wooldridge covers the classical linear model in more detail than Devore, explaining how to check assumptions and what to do if they don't appear to hold.
+
+
+\end{enumerate}
+
+\vskip.15in
+\noindent\textbf{Recommended Textbooks:}
+\begin{enumerate}
+
+ \item Fox, J., \& Weisberg, S. (2011). \textit{An R companion to applied regression.} Thousand Oaks, CA: Sage Publications.
+ 
+We will read selections from the first few chapters of this book as we introduce R.  It is not necessary to buy this book because these chapters will be available from study.net.  On the other hand, this is a useful book to have on your shelf as you learn more about regression and need to translate your knowledge into R.
+
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Policies and Important Dates
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\vspace*{.25in}
+\noindent\textbf{Grading:} 
+\begin{enumerate}
+  \item EDA Lab - 15\%      
+  \item Probability Theory Lab - 15\% 
+  \item Linear Regression Lab - 25\% 
+  \item 2 Quizzes - 20\% (10\% each)
+  \item Weekly Homework - 10\%
+  \item Pre-Class Exercises - 5\%
+  \item Class Participation - 10\%
+\end{enumerate}
+
+\noindent \textbf{Labs:} \\
+\noindent The majority of the final grade is based on three graded labs.  Each of these focuses on a different topic:
+\begin{enumerate}
+  \item Exploratory Data Analysis (group lab)
+  \item Probability Theory (individual lab)
+  \item Classical Linear Regression (group lab)
+\end{enumerate}
+
+In a typical lab, students will download a real-world dataset to analyze using the techniques learned in class.  Each student must submit (1) a PDF report detailing the solutions and (2) an R-script, Jupyter notebook, or Rmd file that is used to generate the solutions. Failing to submitting one of these files will result in an automatic $20\%$ grade reduction.
+
+The Probability Theory lab is unique in that it requires a large number of pencil-and-paper calculations.  Students may scan in their work for submission or use LaTex to type their solutions.  This is an individual lab.
+
+Lab 1 and Lab 3 are designed to be group labs.  Students will work in teams of two or three to complete these.
+
+The Linear Regression Lab gives students a chance to synthesize knowledge gained throughout the semester and combine technical, inferential, and strategic thinking to produce a professional-level analysis.  In the course of this assignment, student teams will have a chance to provide peer feedback to each other.  This will be a chance to practice critical reading of statistical analysis, and enable the strongest possible final products. \\
+
+\noindent \textbf{Quizzes:} \\
+\noindent The purpose of the quizzes is to test your ability to reason about the concepts covered in the course.  Quizzes will be conducted under a time limit and may include multiple-choice questions, short-answer questions, and other question types. \\
+
+
+
+\noindent \textbf{Weekly Homework:} \\
+\noindent Most weeks of the course include a homework set that is designed to reinforce and extend the concepts covered in class.  Each homework is due 24 hours before the following live session so that instructors have time to assess student progress.  Homework will only be graded with a check, a check-minus, or a zero.  In general, students will not receive individual feedback on homework.  Instead, it is their responsibility to bring any questions they have to office hours.
+
+\vskip.15in
+\noindent \textbf{Pre-Class Exercises:} \\
+\noindent Many weeks of the course will include a short pre-class exercise, to be completed before live session.  The purpose of these exercises is to reinforce concepts taught in the video lectures and provide a common foundation for class discussion.
+
+\vskip.15in
+\noindent\textbf{Participation:} \\
+\noindent Students are expected to be active participants in class activities and to come to the live sessions prepared to discuss the videos and readings.  Students should also come to class with questions that they would like to discuss with classmates and the instructor.  Most importantly, we expect all students to behave professionally and help create a supportive learning environment.
+
+
+\vskip.15in
+\noindent\textbf{Late Policy:} \\
+\noindent Homework and labs submitted after the deadline will be docked an automatic 20\%.  Unfortunately, we are not able to accept any work after the live session in which we discuss the solutions. 
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Course Outline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \textbf{Course Outline:}
+
+  
+\begin{enumerate}
+
+  \item Descriptive Statistics and Exploratory Data Analysis (2 lectures)
+  The course begins with an introduction to quantitative research and techniques for exploring a dataset.
+    \begin{itemize}
+	\item Measurement
+	\item Types of variables
+	\item Operationalization of constructs
+	\item Descriptive statistics
+	\item Measures of location
+	\item Measures of dispersion
+	\item Tools for visualizing Data
+	\item Guidelines for exploratory analysis
+    \end{itemize}
+
+  \item Probability Theory and Mathematical Statistics (4 lectures)  
+  We build up from mathematical foundations to understand how statistical models behave.    
+  \begin{itemize}
+    \item Axioms of probability
+      \item Random variables
+      \item Probability density and cumulative probability functions
+      \item Joint distributions
+      \item Unconditional and conditional expectation
+      \item Variance and covariance 
+      \item Sampling
+      \item The Central Limit Theorem
+    \end{itemize}
+
+  \item Estimation and Hypothesis Testing (3 lectures)
+  We introduce statistical inference - the process by which we use a sample to learn things about a population model.
+    \begin{itemize}
+          \item Desirable properties of estimators
+          \item Maximum likelihood estimators
+          \item Method of moments estimators
+          \item Confidence intervals
+          \item The Frequentist approach to statistical inference
+	  \item \textit{z}-tests and \textit{t}-tests for one sample
+	  \item Parametric tests for comparing means
+	  \item The reproducibility crisis
+	  \item \textit{p}-hacking
+      \item \textit{p}-value corrections
+      \item Publication bias
+      \item Strategies for improving reproducibility
+    \end{itemize}
+
+  \item Classical Linear Regression (5 Lectures)  
+  We study linear regression with an emphasis on correctly checking assumptions, and on the flexibility inherent in the linear model.
+  
+    \begin{itemize}
+      \item Bivariate estimation
+      \item Multivariate estimation
+      \item Rubin's Causal Model
+      \item Omitted variable bias
+      \item Factors that influence standard errors
+      \item The classical linear model assumptions
+      \item Key assumptions for large sample sizes
+      \item The use of variable transformations, polynomials, indicator variables, and interaction terms
+      \item Regression Diagnostics and formal statistical assumption testing
+      \item True experiments
+    \end{itemize}
+    
+
+
+\end{enumerate}
+
+
+
+\end{document} 
+
+
