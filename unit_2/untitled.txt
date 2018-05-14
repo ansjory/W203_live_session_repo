@@ -1,0 +1,21 @@
+Notes on Unit 2 preclass: 
+
+Comments: 
+
+Way in which schooling is related to fertility (# of children)
+->Do women delay child bearing in order to gain education?
+->Do women delay education to bare children?
+
+Upper and Lower Limits ot age range
+
+-> Lower limit of 35 chosen on the assumption that women have had all their children by 35. 
+--> Suppose that women are not done having children by 35
+--->If women delay child bearing for education, there will be some women who have high education with a smaller than final count of children, this will reduce the averge number of children in the highly educated cohort and lead to a more negative correlation in the data than the true effect. 
+--->If women delay education for child bearing (and suppose that the true correlation is negative) you will have women in the lower education group (who have finished having their reduced number of children) who will reduce the average number of children in that group which leads to a more positive correlation than the true effect.
+
+-> Upper limit of 44 to limit analysis to a given generational cohort. 
+--> Social norms may change; cultural and social attitude toward education may be different for different generations. We don't want to include this in our analysis since we will then be measuring two effect without a way to isolate either. 
+--> If women were are less likely to pursue post grad education in older cohorts regardless of the number of children, we may find no effect, when one is present.
+
+
+-> Uniform Distribution or ages between 35 and 44
